@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>COVID Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="continent">Continent:</label>
+        <input type="text" name="continent" required>
+
+        <label for="country">Country:</label>
+        <input type="text" name="country" required>
+
+        <label for="population">Population:</label>
+        <input type="text" name="population" required>
+
+        <label for="cases_new">New Cases:</label>
+        <input type="text" name="cases_new" required>
+
+        <label for="cases_active">Active Cases:</label>
+        <input type="text" name="cases_active" required>
+
+        <label for="cases_critical">Critical Cases:</label>
+        <input type="text" name="cases_critical" required>
+
+        <label for="cases_recovered">Recovered Cases:</label>
+        <input type="text" name="cases_recovered" required>
+
+        <label for="cases_1M_pop">Cases per 1M Population:</label>
+        <input type="text" name="cases_1M_pop" required>
+
+        <label for="cases_total">Total Cases:</label>
+        <input type="text" name="cases_total" required>
+
+        <label for="deaths_new">New Deaths:</label>
+        <input type="text" name="deaths_new" required>
+
+        <label for="deaths_1M_pop">Deaths per 1M Population:</label>
+        <input type="text" name="deaths_1M_pop" required>
+
+        <label for="tests_1M_pop">Tests per 1M Population:</label>
+        <input type="text" name="tests_1M_pop" required>
+
+        <label for="tests_total">Total Tests:</label>
+        <input type="text" name="tests_total" required>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
